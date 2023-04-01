@@ -1,0 +1,72 @@
+@use "../media-queries.scss" as *;
+
+%flex-full {
+  display: flex;
+  width: 100%;
+  height: 100%;
+}
+
+%absolute-full {
+  width: 100%;
+  height: 100%;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+}
+
+%top-left-full {
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+
+%flex-center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+%trans {
+  -webkit-transition: 0.5s ease-in-out;
+  -moz-transition: 0.5s ease-in-out;
+  -o-transition: 0.5s ease-in-out;
+  transition: 0.5s ease-in-out;
+}
+
+
+
+.photo_large{
+  position: relative;
+  overflow: hidden;
+    border-radius: 50%;
+    border: 15px solid var(--clr-bright-color);
+    margin: 0 auto;
+    height: 250px;
+    width: 250px;
+    @include mq(small){
+      height: 350px;
+      width: 350px;
+    }
+    @include mq(medium){
+      height: 400px;
+      width: 400px;
+    }
+    @include mq(large){
+      margin-left: 0;
+    }
+    @include mq(xl){
+      height: 450px;
+      width: 450px;
+    }
+    img{
+      position: absolute;
+      height: 100%;
+      width: 100%;
+      inset: 0px;
+      object-fit: cover;
+      color: transparent;
+    }
+}
+
