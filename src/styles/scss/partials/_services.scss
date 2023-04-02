@@ -41,7 +41,7 @@
   margin: calc(1rem + 2vw) auto;
   padding: 0;
   display: grid;
-  --column-gap: 2rem;
+  --column-gap: 5rem;
   --row-gap: 2rem;
   --mwidth: 450px;
   --columns: 3;
@@ -59,7 +59,6 @@
   background-color: #ffffff;
   border-radius: 5px;
   box-shadow: 5px 5px 10px #00000029;
-  max-width: 320px;
   margin: 0 auto;
 }
 
@@ -252,7 +251,7 @@
 
 .base__content p {
   @extend %flex-center, %trans;
-  font-size: var(--fs-text-small);
+  font-size: clamp(1rem, 4vw, 1.2rem);
   width: auto;
   padding: 0;
   text-align: center;
@@ -274,7 +273,7 @@
     display: unset;
     -webkit-line-clamp: unset;
     -webkit-box-orient: unset;
-    font-size: clamp(0.75rem, 6vw, 1.1rem);
+    font-size: clamp(1rem, 4vw, 1.2rem);
     color: var(--clr-contrast-700);
     line-height: 1.8;
     border-bottom: 1px solid var(--clr-acc3-color);

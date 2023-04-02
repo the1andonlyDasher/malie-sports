@@ -59,7 +59,6 @@ export default function Home() {
 
   return (
     <>
-      <div ref={root} className="main">
         <Navbar logo={logo} alt="Logo von Malie Sports" />
         <BlobBg>
           <motion.video
@@ -213,7 +212,6 @@ export default function Home() {
           <FooterLink linkName="AGB" />
           <FooterLink linkName="Datenschutz" />
         </Footer>
-      </div>
     </>
   );
 }

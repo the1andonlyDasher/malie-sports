@@ -23,7 +23,6 @@ const variants = {
 const Hero = () => {
     return (
         <>
-        <div className="video"></div>
         <div className="__s__b">
           <div className="lr__wrapper">
             <motion.div className="left-wrapper" 
@@ -32,9 +31,10 @@ const Hero = () => {
                   animate="animate"
                   exit="exit"
                   >
-              <h1><strong>Zu Hause</strong><br />in Bestform</h1>
+              <h1>Personal Training<br /> <strong> da wo du bist!</strong></h1>
               <p>
-                Pre und Postnateles Home Training - für Bremen und Worpswede.
+              Egal ob bei dir zu Hause oder im Park. Mit gezielten Ausdauer- und
+              Kräftigungsübungen zu einem positiven Körpergefühl.
               </p>
 
               <button className="btn__primary">Jetzt loslegen</button>

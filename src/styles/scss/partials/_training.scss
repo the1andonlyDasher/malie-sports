@@ -70,3 +70,14 @@
     }
 }
 
+.text {
+  flex-direction: unset;
+  align-items: flex-start;
+  gap: 5%;
+  & > div {
+    flex: 1 1!important;
+    p{
+      line-height: 1.7;
+    }
+  }
+}

@@ -287,9 +287,7 @@ a {
 
   &.black{
     color: var(--clr-dark-color);
-    &:hover, &:active{
-      background-color: var(--clr);
-    }
+
   }
 
   @include mq(medium) {

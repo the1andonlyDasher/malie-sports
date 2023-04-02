@@ -566,7 +566,7 @@ p,
   h5,
   p,
   .sub {
-    margin: var(--space-xs) auto var(--space-xs) 0;
+    margin: var(--space-s) auto var(--space-s) 0;
     width: 100%;
     text-align: left;
   }
@@ -582,7 +582,7 @@ p,
 }
 
 h1 {
-  font-size: var(--fs-header);
+  font-size: clamp(2rem, 6vw, 4rem);
   position: relative;
   font-family: "Baloo Da 2", sans-serif;
   font-weight: 800;
@@ -1999,9 +1999,6 @@ a {
 :is(.nav-items-desktop, .nav-items-mobile) li .nav-link.black {
   color: var(--clr-dark-color);
 }
-:is(.nav-items-desktop, .nav-items-mobile) li .nav-link.black:hover, :is(.nav-items-desktop, .nav-items-mobile) li .nav-link.black:active {
-  background-color: var(--clr);
-}
 @media screen and (min-width: 880px) {
   :is(.nav-items-desktop, .nav-items-mobile) li .nav-link {
     font-size: clamp(1rem, 5vw, 1.25rem);
@@ -2398,7 +2395,7 @@ form .btn-group .btn-group:nth-child(n+2) {
   margin: calc(1rem + 2vw) auto;
   padding: 0;
   display: grid;
-  --column-gap: 2rem;
+  --column-gap: 5rem;
   --row-gap: 2rem;
   --mwidth: 450px;
   --columns: 3;
@@ -2416,7 +2413,6 @@ form .btn-group .btn-group:nth-child(n+2) {
   background-color: #ffffff;
   border-radius: 5px;
   box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.1607843137);
-  max-width: 320px;
   margin: 0 auto;
 }
 
@@ -2595,7 +2591,7 @@ form .btn-group .btn-group:nth-child(n+2) {
 }
 
 .base__content p {
-  font-size: var(--fs-text-small);
+  font-size: clamp(1rem, 4vw, 1.2rem);
   width: auto;
   padding: 0;
   text-align: center;
@@ -2617,7 +2613,7 @@ form .btn-group .btn-group:nth-child(n+2) {
   display: unset;
   -webkit-line-clamp: unset;
   -webkit-box-orient: unset;
-  font-size: clamp(0.75rem, 6vw, 1.1rem);
+  font-size: clamp(1rem, 4vw, 1.2rem);
   color: var(--clr-contrast-700);
   line-height: 1.8;
   border-bottom: 1px solid var(--clr-acc3-color);
@@ -2737,6 +2733,18 @@ ul.transition li {
   color: transparent;
 }
 
+.text {
+  flex-direction: unset;
+  align-items: flex-start;
+  gap: 5%;
+}
+.text > div {
+  flex: 1 1 !important;
+}
+.text > div p {
+  line-height: 1.7;
+}
+
 :root {
   --clr-dark-color: #201E1E;
   --clr-bright-color: #F6FBF6;
@@ -2823,3 +2831,5 @@ ul.transition li {
     --space-l: clamp(2rem, 2vw + 1.5rem, 5rem);
   }
 }
+
+/*# sourceMappingURL=style.css.map */
