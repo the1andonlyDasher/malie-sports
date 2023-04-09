@@ -5,8 +5,8 @@ import { motion, useAnimation, useInView } from "framer-motion";
 
 const variants = {
   hidden: { y: 50, opacity: 0 },
-  visible: {y: 0,  opacity: 1 },
-  exit: {y: 50, opacity: 0}
+  visible: { y: 0, opacity: 1 },
+  exit: { y: 50, opacity: 0 },
 };
 
 const SvgComponent = (props) => (
@@ -46,17 +46,17 @@ const Card = ({ image, title, alt, subtitle, subtext, text, btn_target }) => {
         <h4>{title}</h4>
         <h5>{subtitle}</h5>
         <p className="sub">{subtext}</p>
-        <p>{text}</p>
+        <p className="card__text">{text}</p>
         <div className="button__wrapper-services no-flex">
-          <button className="btn__primary no-flex">
-            <Link href="#contact">Jetzt loslegen</Link>
-          </button>
-          <button className="secondary">
-            <Link href={`${btn_target}`} scroll={false}>
+          <Link href="#contact">
+            <button className="btn__primary no-flex">Jetzt loslegen</button>
+          </Link>
+          <Link href={`${btn_target}`} scroll={false}>
+            <button className="secondary">
               Mehr erfahren
-            </Link>
-            <SvgComponent />
-          </button>
+              <SvgComponent />
+            </button>
+          </Link>
         </div>
       </div>
     </motion.div>

@@ -1,51 +1,53 @@
-import React, { useRef, useEffect, forwardRef } from "react";
-import { motion, useInView, useAnimationControls } from "framer-motion";
+import React, { useRef, forwardRef } from "react";
+import { motion } from "framer-motion";
+
+const section_variants = {
+  initial: {
+    transition: { staggerChildren: 0.2 },
+  },
+  enter: {
+    transition: { staggerChildren: 0.2, delayChildren: 0.35 },
+  },
+  exit: {
+    transition: { staggerChildren: 0.2, delayChildren: 0.5 },
+  },
+};
 
 const header_variants = {
-  initial: { x: -50, opacity: 0 },
-  animate: { x: 0, opacity: 1 },
-  exit: { x: 50, opacity: 0 },
+  initial: { opacity: 0 },
+  enter: {
+    opacity: 1,
+    transition: { type: "spring", stiffness: 100, duration: 0.5, delay: 1.25 },
+  },
+  exit: {
+    opacity: 0,
+    transition: { type: "spring", stiffness: 100, duration: 0.5 },
+  },
 };
 
 const Section = forwardRef(function Section(props, ref) {
-  const sectionHeader = useRef();
-  const inView = useInView(sectionHeader, {
-    once: true,
-    margin: "0px 100px 100px 0px",
-  });
-  const controls = useAnimationControls();
-  useEffect(() => {
-    if (inView) {
-      controls.start("animate");
-    }
-  }, [controls, inView]);
+  const wrapper = useRef();
   return (
-    <section data-section-name={props.sectionName} ref={ref} id={props.id}>
-      {props.header ? (
-        <motion.h2
-          ref={sectionHeader}
-          variants={header_variants}
-          initial="initial"
-          animate={controls}
-          exit="exit"
-          transition={{ type: "spring", stiffness: 100, duration: 1 }}
-        >
-          {props.header}
-        </motion.h2>
-      ) : null}
-      {props.text ? (
-        <motion.p
-          variants={header_variants}
-          initial="initial"
-          animate={controls}
-          exit="exit"
-          transition={{ type: "spring", stiffness: 100, duration: 1 }}
-        >
-          {props.text}
-        </motion.p>
-      ) : null}
-      {props.children}
-    </section>
+    <motion.section
+      data-section-name={props.sectionName}
+      initial="initial"
+      whileInView="enter"
+      viewport={{ margin: "100px 0px 100px 0px" }}
+      exit="exit"
+      ref={ref}
+      id={props.id}
+      variants={section_variants}
+    >
+      <motion.div ref={wrapper} variants={section_variants} className="__s__b">
+        {props.header ? (
+          <motion.h2 variants={header_variants}>{props.header}</motion.h2>
+        ) : null}
+        {props.text ? (
+          <motion.p variants={header_variants}>{props.text}</motion.p>
+        ) : null}
+        {props.children}
+      </motion.div>
+    </motion.section>
   );
 });
 

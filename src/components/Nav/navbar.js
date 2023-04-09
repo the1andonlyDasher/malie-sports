@@ -31,6 +31,7 @@ const Navbar = ({ logo, alt, children }) => {
         return isShrunk;
       });
     };
+    handler();
     window.addEventListener("scroll", handler);
     //--------------------------------------------------------------------------------------- Mutation Observer
     // var observer = new MutationObserver(function (mutations) {
@@ -48,12 +49,12 @@ const Navbar = ({ logo, alt, children }) => {
 
 
   const variants = {
-    open:{},
-    closed:{}
+    closed:{},
+    open:{}
   };
 
   const image_variants = {
-    hidden: { scale: 0, opacity: 0},
+    initial: { scale: 0, opacity: 0},
     enter: {scale: [0, 1.2 ,1], opacity: 1},
     exit: {scale: 0, opacity: 0},
   }

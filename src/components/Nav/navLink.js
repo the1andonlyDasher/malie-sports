@@ -8,6 +8,7 @@ const NavLink = ({name, link, hash}) => {
                 href={hash ? hash : link} 
                 aria-label={name} 
                 data-attribute-page-target={name} 
+                scroll={false}
                 className="nav-link">
                 {name}
             </Link>

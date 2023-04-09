@@ -155,15 +155,15 @@
   font-size: clamp(1.5rem, 6vw, 2rem);
 }
 
-.base__content .secondary{
+ .secondary{
   @extend %trans;
   background-color: transparent;
   border: none;
   color: var(--clr-acc1-color);
   text-transform: uppercase;
   font-weight: 600;
-  padding: var(--space-xs);
-  font-size: var(--fs-text);
+  padding: var(--space-xs) 0;
+  font-size: var(--fs-text-small);
   margin: 1rem 0 0 0;
   a {
     color: var(--clr-acc1-color);
@@ -251,18 +251,35 @@
 
 .base__content p {
   @extend %flex-center, %trans;
-  font-size: clamp(1rem, 4vw, 1.2rem);
+  font-size: clamp(0.7rem, 4vw, 1rem);
   width: auto;
   padding: 0;
   text-align: center;
   overflow: hidden;
-  margin:2rem 0;
-  overflow: hidden;
-  text-overflow: ellipsis;
-  display: -webkit-box;
+  margin: 1rem 0;
   -webkit-line-clamp: 2;
-  -webkit-box-orient: vertical;
-  color: var(--clr-contrast-500)
+  color: var(--clr-contrast-500);
+  text-overflow: ellipsis;
+  word-wrap: break-word;
+  max-height: 5em;
+  line-height: 1.5em;
+  }
+
+  .card__text{
+    position: relative;
+    display: block!important;
+    &::before{
+      content: "";
+      position: absolute;
+      bottom: 0;
+      width: 100%;
+      left: 0;
+      background-image: linear-gradient(180deg, rgba(255, 255, 255, 0), white);
+      height: 100%;
+      color: var(--clr-dark-color);
+      font-size: var(--fs-sub-big);
+      line-height: 1.9;
+    }
   }
 
   .base__content p.sub {
@@ -273,12 +290,13 @@
     display: unset;
     -webkit-line-clamp: unset;
     -webkit-box-orient: unset;
-    font-size: clamp(1rem, 4vw, 1.2rem);
+    font-size: clamp(0.8rem, 4vw, 1.1rem);
     color: var(--clr-contrast-700);
-    line-height: 1.8;
+    line-height: 1.5;
     border-bottom: 1px solid var(--clr-acc3-color);
     border-top: 1px solid var(--clr-acc3-color);
     min-height: 7ch;
+    max-height: unset;
     justify-content: center;
     display: flex;
     }
@@ -313,6 +331,10 @@ ul.transition {
   justify-content: center;
   flex-wrap: wrap;
   padding: 0;
+  a {
+    display: flex;
+    flex: 1 1 auto;
+  }
   .btn__primary{
     font-size: clamp(0.75rem, 5vw, 1.25rem);
   }
@@ -328,3 +350,4 @@ ul.transition {
 .no-flex{
   flex: unset;
 }
+

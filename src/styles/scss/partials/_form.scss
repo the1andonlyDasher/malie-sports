@@ -180,6 +180,7 @@ form .btn__primary {
   width: 100%;
   max-width: 300px;
   margin: 2rem auto 0 0;
+  flex: unset;
 }
 
 form .btn-group .btn-group:nth-child(n + 2) {
@@ -254,13 +255,14 @@ form .btn-group .btn-group:nth-child(n + 2) {
 
 .thanks__message {
   @extend %flex-center;
-  min-height: 300px;
+  justify-content: flex-start;
   display: none;
-  flex-direction: column;
+  flex-wrap: wrap;
   text-align: center;
   width: 100%;
+  padding: var(--space-m) 0;
   font-size: var(--fs-sub-big);
-  font-family: "Fira Sans", sans-serif;
+  color: var(--clr-main2-color);
   h3 {
     font-size: var(--fs-text);
   }

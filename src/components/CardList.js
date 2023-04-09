@@ -5,6 +5,7 @@ const variants = {
   transition:{staggerChildren: 0.07, when: "afterChildren",}},
   visible: {
      opacity: 1,
+     delay: 1.25, 
     transition:{
       when: "beforeChildren",
       staggerChildren: 0.07, delayChildren: 0.2

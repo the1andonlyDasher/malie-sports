@@ -12,7 +12,7 @@ const blob_variants = {
         ease: "circOut",
       },
     },
-    exit: { clipPath: "circle(0% at 50% 50%)", transition:{delay: 1}},
+    exit: { clipPath: "circle(0% at 50% 50%)", transition:{delay: 1, duration: 0.5}},
   };
 
 const BlobBg = ({children}) => {

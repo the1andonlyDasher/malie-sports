@@ -55,7 +55,7 @@ export const NavItem = ({href, name, clickLink}) => {
         duration: 0.75
     }}
       >
-        <Link aria-label={name} scroll className={isShrunk ? "nav-link black" : "nav-link"} href={`${href}`} onClick={clickLink}>{name}</Link>
+        <Link aria-label={name} scroll={false} className={isShrunk ? "nav-link black" : "nav-link"} href={`${href}`} onClick={clickLink}>{name}</Link>
       </motion.li>
       </>
     );

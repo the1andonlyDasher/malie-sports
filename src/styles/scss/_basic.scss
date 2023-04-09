@@ -313,13 +313,13 @@ red{
   overflow: visible;
   min-height: 100vh;
   min-height: 100dvh;
-  padding: 150px 1.5rem 1rem 1.5rem;
+  padding: 50px 1.5rem 1rem 1.5rem;
   width: 100%;
   flex-direction: column;
   justify-content: flex-end;
   position: relative;
   @include mq(small) {
-    padding: 150px 2.5rem 1rem 2.5rem;
+    padding: 100px 2.5rem 1rem 2.5rem;
   }
   @include mq(medium) {
     padding: 150px 5% 1rem 5%;
@@ -333,6 +333,7 @@ red{
   .__s__b {
     @extend %flex-center;
     flex-direction: column;
+    justify-content: flex-start;
     width: 100%;
     max-width: 1200px;
     margin: 7rem 0;
@@ -343,13 +344,7 @@ red{
   }
 }
 
-.main section:first-of-type {
-  padding-top: 120px;
-}
 
-.main section:last-of-type {
-  padding-bottom: 100px;
-}
 
 #data-scroll-content {
   will-change: transform;
@@ -424,29 +419,29 @@ div[data-scroll-content] .frame:first-child {
 }
 
 // additional classes for the background blob
-.Start, .Training, .Uber, .Kontakt{
+.home, .training, .about, .contact{
   transition: clip-path 0.5s ease-in-out;
   -moz-transition: clip-path 0.5s ease-in-out;
   -o-transition: clip-path 0.5s ease-in-out;
   -webkit-transition: clip-path 0.5s ease-in-out;
 }
 
-.Start{
+.home{
   clip-path: circle(50% at 50% 90%)!important;
   @include mq(medium){
     clip-path: circle(50% at 15% 51%)!important;
   }
 }
 
-.Training{
+.training{
   clip-path: circle(70% at 50% 0%) !important;
 }
 
-.Uber{
+.about{
   clip-path: circle(84% at 100% 50%)!important;
 }
 
-.Kontakt{
+.contact{
   clip-path: circle(70% at 20% 20%) !important;
 }
 
@@ -466,6 +461,7 @@ div[data-scroll-content] .frame:first-child {
 
 .bg__trans{
   @extend %absolute-full;
+
   position: fixed;
   background-image: linear-gradient(45deg, var(--clr-main-color), var(--clr-acc3-color));
   background-image: -webkit-linear-gradient(45deg, var(--clr-main-color), var(--clr-acc3-color));
@@ -476,5 +472,26 @@ div[data-scroll-content] .frame:first-child {
     position: absolute;
     bottom: 0;
     right: 0;
+  }
+}
+
+.blob{
+  @extend %top-left-full;
+  position: fixed;
+  background-color: var(--clr-bright-color);
+  z-index: -2;
+  display: none;
+  @include mq(medium){
+    display: block;
+  }
+}
+
+.blob__mobile{
+  @extend %top-left-full;
+  position: fixed;
+  background-color: var(--clr-bright-color);
+  z-index: -2;
+  @include mq(medium){
+    display: none;
   }
 }

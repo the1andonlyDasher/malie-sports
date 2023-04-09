@@ -54,6 +54,7 @@
 }
 .lr__wrapper :is(.right-wrapper, .left-wrapper) {
   @extend %flex-full;
+  position: relative;
   flex-wrap: wrap;
   flex: 1 1 50%;
 }
@@ -97,12 +98,7 @@
   white-space: nowrap;
 }
 
-.blob{
-  @extend %top-left-full;
-  position: fixed;
-  background-color: var(--clr-bright-color);
-  z-index: -2;
-}
+
 
 #home .btn__primary{
   margin: var(--space-s) 1rem 0 0rem;
