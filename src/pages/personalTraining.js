@@ -3,7 +3,7 @@ import { NavItem } from "@/components/Nav/NavItemDesktop";
 import Navigation from "@/components/Nav/Navigation";
 import MobileNav from "@/components/Nav/MobileNav";
 import { NavItem as Mnav } from "@/components/Nav/NavItemMobile";
-import logo from "../../public/images/Logo-png-min.png";
+import logo from "../../public/images/malie-Logo.svg";
 import Navbar from "@/components/Nav/navbar";
 import Section from "@/components/section";
 import BlobBg from "@/components/BlobBg";
@@ -199,7 +199,9 @@ const DetailPersonal = () => {
                 Außerdem kann es sein, dass die Betreuung im Fitnessstudio nicht
                 deinen Erwartungen entspricht und du dich nach einer
                 individuelleren Betreuung sehnst"
-            image={"/images/freundinnen.webp"}
+            image={"/images/personal.webp"}
+            image2={"/images/P1980899.webp"}
+            image3={"/images/P19900134.webp"}
           ></DetailHero>
         </Section>
       </InView>
@@ -231,13 +233,15 @@ const DetailPersonal = () => {
                 berücksichtigt. Wir können uns auf funktionelle Bewegungen,
                 Krafttraining, Ausdauertraining oder eine Kombination davon
                 konzentrieren, je nachdem, was für dich am besten funktioniert."
-            image={"/images/freundinnen.webp"}
+            image={"/images/P1990357.webp"}
+            image2={"/images/P1990178.webp"}
+            image3={"/images/P1980903.webp"}
           ></DetailHero>
         </Section>
       </InView>
       <InView
         threshold={0.6}
-        rootMargin="0px 100px -50px 0px"
+        rootMargin="100px 0px 100px 0px"
         as="div"
         onChange={(inView, entry) => {
           if (!first) {
@@ -265,7 +269,9 @@ const DetailPersonal = () => {
                 Betreuung, die genau auf dich und deine Bedürfnisse abgestimmt
                 ist. Kontaktiere mich noch heute und lass uns gemeinsam an
                 deinem Ziel arbeiten!"
-            image={"/images/freundinnen.webp"}
+            image={"/images/P1990763.webp"}
+            image2={"/images/P1990400.webp"}
+            image3={"/images/P1980905.webp"}
           ></DetailHero>
         </Section>
       </InView>

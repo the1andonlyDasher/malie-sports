@@ -37,7 +37,7 @@ const Hero = () => {
               Kräftigungsübungen zu einem positiven Körpergefühl.
               </p>
 
-              <button className="btn__primary">Jetzt loslegen</button>
+              <button type="button" className="btn__primary">Jetzt loslegen</button>
 
             </motion.div>
             <div className="right-wrapper"></div>

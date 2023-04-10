@@ -1,4 +1,3 @@
-import Image from "next/image";
 import Navbar from "@/components/Nav/navbar";
 import Section from "@/components/section";
 import Hero from "@/components/Hero";
@@ -9,14 +8,15 @@ import personal_svg from "../../public/images/personal_o.svg";
 import freundinnen_svg from "../../public/images/freundinnen_o.svg";
 import events_svg from "../../public/images/events_o.svg";
 import malie from "../../public/images/5f8312169ee77-_1_.webp";
-import { useEffect, useLayoutEffect, useRef, useState } from "react";
+import { useEffect, useState } from "react";
 import ContactForm from "@/components/contact/ContactForm";
 import Footer from "@/components/footer/Footer";
 import FooterLink from "@/components/footer/footerLink";
-import { motion, useInView, useAnimationControls } from "framer-motion";
+import { motion, useAnimationControls } from "framer-motion";
 import BlobBg from "@/components/BlobBg";
 import { InView, useInView as useView } from "react-intersection-observer";
-const logo = require("../../public/images/Logo-png-min.png");
+import logo from "../../public/images/malie-Logo.svg";
+
 
 const blob__mobile_variants = {
   hidden: { clipPath: "circle(0% at 15% 51%)" },
@@ -89,7 +89,8 @@ export default function Home() {
             autoPlay
             loop
           >
-            <source src="/videos/video.mp4" type="video/mp4" />
+            <track kind="captions" ></track>
+            <source src="/videos/video.mp4" type="video/mp4"  />
           </motion.video>
         </BlobBg>
         <motion.div
@@ -118,7 +119,7 @@ export default function Home() {
         ></motion.div>
         <InView
         threshold={0.3}
-          rootMargin="0px 100px -50px 0px"
+        rootMargin="100px 0px 100px 0px"
           as="div"
           onChange={(inView, entry) =>{
             if(!first){
@@ -130,13 +131,13 @@ export default function Home() {
             : null
         }}}
         >
-          <Section ref={ref} sectionName="home">
+          <Section ref={ref} sectionName="home" id="home">
             <Hero />
           </Section>
         </InView>
         <InView
         threshold={0.3}
-          rootMargin="0px 100px -50px 0px"
+          rootMargin="100px 0px 100px 0px"
           as="div"
           onChange={(inView, entry) =>
             inView
@@ -185,7 +186,7 @@ export default function Home() {
         </InView>
         <InView
         threshold={0.3}
-          rootMargin="0px 100px -50px 0px"
+        rootMargin="100px 0px 100px 0px"
           as="div"
           onChange={(inView, entry) =>
             inView
@@ -213,7 +214,7 @@ export default function Home() {
         </InView>
         <InView
         threshold={0.3}
-          rootMargin="0px 100px -50px 0px"
+        rootMargin="100px 0px 100px 0px"
           as="div"
           onChange={(inView, entry) =>
             inView

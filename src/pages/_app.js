@@ -1,16 +1,28 @@
 import "@/styles/style.css";
 import { AnimatePresence, motion } from "framer-motion";
-
+import Head from "next/head";
+import { useEffect } from "react";
 
 const variants = {
-  initial: {  opacity: 0 },
-  enter: {  opacity: 1, transition:{staggerChildren: 0.5, delayChildren: 2, duration: 0.5} },
-  exit: {  opacity: 0, transition:{ staggerChildren: 0.5, staggerDirection: -1, duration: 0.5, delay: 2} },
+  initial: { opacity: 0 },
+  enter: {
+    opacity: 1,
+    transition: { staggerChildren: 0.5, delayChildren: 2, duration: 0.5 },
+  },
+  exit: {
+    opacity: 0,
+    transition: {
+      staggerChildren: 0.5,
+      staggerDirection: -1,
+      duration: 0.5,
+      delay: 2,
+    },
+  },
 };
 
 const handExitComplete = () => {
-  window.scrollTo(0,0)
-  if (typeof window !== 'undefined') {
+  window.scrollTo(0, 0);
+  if (typeof window !== "undefined") {
     // Get the hash from the url
     const hashId = window.location.hash;
 
@@ -21,13 +33,12 @@ const handExitComplete = () => {
       if (element) {
         // Smooth scroll to that elment
         element.scrollIntoView({
-          behavior: 'smooth',
-          block: 'start',
-          inline: 'nearest',
+          behavior: "smooth",
+          block: "start",
+          inline: "nearest",
         });
-        console.log("scrollToHash")
-
-      } 
+        console.log("scrollToHash");
+      }
     }
     // else {
     //   window.scrollTo(0,0)
@@ -36,25 +47,41 @@ const handExitComplete = () => {
   }
 };
 
-export default function App({ Component, pageProps, router }) {
-  
 
+
+export default function App({ Component, pageProps, router }) {
+  useEffect(() => {
+    if (typeof window !== 'undefined') {
+            const loader = document.getElementById('globalLoader');
+        if (loader)
+            loader.style.display = 'none';
+    }
+  }, []);
   return (
-    <AnimatePresence
-      mode="wait"
-      initial={true}
-      onExitComplete={()=> setTimeout(()=>{handExitComplete()}, 100)}
-    >
-              <motion.div 
-        key={router.route}
-        variants={variants}
-        initial="initial"
-        animate="enter"
-        exit="exit"
-        className='main'
+    <>
+      <Head>
+        <title>Malie Sports</title>
+      </Head>
+      <AnimatePresence
+        mode="wait"
+        initial={true}
+        onExitComplete={() =>
+          setTimeout(() => {
+            handExitComplete();
+          }, 100)
+        }
+      >
+        <motion.div
+          key={router.route}
+          variants={variants}
+          initial="initial"
+          animate="enter"
+          exit="exit"
+          className="main"
         >
-      <Component {...pageProps}/>
-      </motion.div>
-    </AnimatePresence>
+          <Component {...pageProps} />
+        </motion.div>
+      </AnimatePresence>
+    </>
   );
 }

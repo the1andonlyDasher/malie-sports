@@ -84,6 +84,8 @@ const DetailHero = ({
   btn_txt,
   btn_txt_sec,
   image,
+  image2,
+  image3
 }) => {
   const ref = useRef();
   const inView = useInView(ref, { once: true, margin: "0px" });
@@ -125,9 +127,9 @@ const DetailHero = ({
             >
               <Image
                 alt={altText}
-                src={image}
+                src={`${image}`}
                 placeholder="blur"
-                blurDataURL={image}
+                blurDataURL={`${image}`}
                 quality={100}
                 fill
                 sizes="100%"
@@ -143,9 +145,9 @@ const DetailHero = ({
             >
               <Image
                 alt={altText}
-                src={image}
+                src={`${image2}`}
                 placeholder="blur"
-                blurDataURL={image}
+                blurDataURL={`${image2}`}
                 quality={100}
                 fill
                 sizes="100%"
@@ -157,9 +159,9 @@ const DetailHero = ({
             <motion.div className="photo_large third" variants={image_variants}>
               <Image
                 alt={altText}
-                src={image}
+                src={`${image3}`}
                 placeholder="blur"
-                blurDataURL={image}
+                blurDataURL={`${image3}`}
                 quality={100}
                 fill
                 sizes="100%"
@@ -247,9 +249,9 @@ const DetailHero = ({
             >
               <Image
                 alt={altText}
-                src={image}
+                src={`${image}`}
                 placeholder="blur"
-                blurDataURL={image}
+                blurDataURL={`${image}`}
                 quality={100}
                 fill
                 sizes="100%"
@@ -265,9 +267,9 @@ const DetailHero = ({
             >
               <Image
                 alt={altText}
-                src={image}
+                src={`${image2}`}
                 placeholder="blur"
-                blurDataURL={image}
+                blurDataURL={`${image2}`}
                 quality={100}
                 fill
                 sizes="100%"
@@ -279,9 +281,9 @@ const DetailHero = ({
             <motion.div className="photo_large third" variants={image_variants}>
               <Image
                 alt={altText}
-                src={image}
+                src={`${image3}`}
                 placeholder="blur"
-                blurDataURL={image}
+                blurDataURL={`${image3}`}
                 quality={100}
                 fill
                 sizes="100%"

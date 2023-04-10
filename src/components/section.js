@@ -9,7 +9,7 @@ const section_variants = {
     transition: { staggerChildren: 0.2, delayChildren: 0.35 },
   },
   exit: {
-    transition: { staggerChildren: 0.2, delayChildren: 0.5 },
+    transition: { staggerChildren: 0.2 },
   },
 };
 
@@ -17,11 +17,11 @@ const header_variants = {
   initial: { opacity: 0 },
   enter: {
     opacity: 1,
-    transition: { type: "spring", stiffness: 100, duration: 0.5, delay: 1.25 },
+    transition: { ease:"easeIn", duration: 0.5, delay: 0.5 },
   },
   exit: {
     opacity: 0,
-    transition: { type: "spring", stiffness: 100, duration: 0.5 },
+    transition: { ease:"easeOut", duration: 0.5 },
   },
 };
 

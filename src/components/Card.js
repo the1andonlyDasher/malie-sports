@@ -52,7 +52,7 @@ const Card = ({ image, title, alt, subtitle, subtext, text, btn_target }) => {
             <button className="btn__primary no-flex">Jetzt loslegen</button>
           </Link>
           <Link href={`${btn_target}`} scroll={false}>
-            <button className="secondary">
+            <button type="button" className="secondary">
               Mehr erfahren
               <SvgComponent />
             </button>

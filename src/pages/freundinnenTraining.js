@@ -3,7 +3,7 @@ import { NavItem } from "@/components/Nav/NavItemDesktop";
 import Navigation from "@/components/Nav/Navigation";
 import MobileNav from "@/components/Nav/MobileNav";
 import { NavItem as Mnav } from "@/components/Nav/NavItemMobile";
-import logo from "../../public/images/Logo-png-min.png";
+import logo from "../../public/images/malie-Logo.svg";
 import Navbar from "@/components/Nav/navbar";
 import Section from "@/components/section";
 import BlobBg from "@/components/BlobBg";
@@ -173,7 +173,7 @@ const DetailPersonal = () => {
       ></motion.div> */}
       <InView
         threshold={0.6}
-        rootMargin="0px 100px -50px 0px"
+        rootMargin="100px 0px 100px 0px"
         as="div"
         onChange={(inView, entry) => {
           if (!first) {
@@ -196,12 +196,14 @@ const DetailPersonal = () => {
             alternativeSub={"Was ist das Freundinnen Training?"}
             text="Als erfahrene Personal Trainerin möchte ich dir und deiner Freundin gerne das Freundinnen Training anbieten, das speziell auf eure individuellen Bedürfnisse und Ziele abgestimmt ist. Egal, ob ihr euch einfach fit halten wollt, eure Ausdauer verbessern oder gezielt Muskeln aufbauen möchtet - wir werden gemeinsam ein effektives Workout planen, das euch dabei unterstützt."
             image={"/images/freundinnen.webp"}
+            image2={"/images/P1990401.webp"}
+            image3={"/images/P1990002.webp"}
           ></DetailHero>
         </Section>
       </InView>
       <InView
         threshold={0.6}
-        rootMargin="0px 100px -50px 0px"
+        rootMargin="100px 0px 100px 0px"
         as="div"
         onChange={(inView, entry) => {
           if (!first) {
@@ -218,13 +220,15 @@ const DetailPersonal = () => {
             altText={"Personal Training"}
             alternativeSub={"Was erwartet dich?"}
             text="Selbstverständlich könnt ihr eure Kinder mitbringen, denn das Training soll für euch so stressfrei wie möglich sein. Ihr habt die Möglichkeit, das Workout bei euch zu Hause durchzuführen oder in einem nahegelegenen Park an der frischen Luft zu trainieren. Die Wahl des Ortes hängt ganz von euren Vorlieben und Bedürfnissen ab."
-            image={"/images/freundinnen.webp"}
+            image={"/images/P1990355.webp"}
+            image2={"/images/P1990396.webp"}
+            image3={"/images/P1990689.webp"}
           ></DetailHero>
         </Section>
       </InView>
       <InView
         threshold={0.6}
-        rootMargin="0px 100px -50px 0px"
+        rootMargin="100px 0px 100px 0px"
         as="div"
         onChange={(inView, entry) => {
           if (!first) {
@@ -238,16 +242,18 @@ const DetailPersonal = () => {
       >
         <Section animate={controls}>
           <DetailHero
-            altText={"Personal Training"}
+            altText={"Freundinnen Training"}
             alternativeSub={"Mehr als zusammen trainieren"}
             text="Durch das Freundinnen Training könnt ihr nicht nur eure Fitness verbessern, sondern auch eure Freundschaft stärken. Ihr könnt euch gegenseitig motivieren, unterstützen und gemeinsam Erfolge feiern. Das Training ist auch kosteneffizient, da ihr die Kosten gemeinsam teilen könnt. Also zögert nicht und meldet euch jetzt für das Freundinnen Training an! Gemeinsam können wir eure Fitnessreise starten und euch zu einem gesünderen und glücklicheren Lebensstil verhelfen."
-            image={"/images/freundinnen.webp"}
+            image={"/images/P1990083.webp"}
+            image2={"/images/P1980895.webp"}
+            image3={"/images/P1980759.webp"}
           ></DetailHero>
         </Section>
       </InView>
       <InView
         threshold={0.6}
-        rootMargin="0px 100px -50px 0px"
+        rootMargin="100px 0px 100px 0px"
         as="div"
         onChange={(inView, entry) => {
           if (!first) {

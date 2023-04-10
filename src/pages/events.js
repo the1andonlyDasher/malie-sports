@@ -3,7 +3,7 @@ import { NavItem } from "@/components/Nav/NavItemDesktop";
 import Navigation from "@/components/Nav/Navigation";
 import MobileNav from "@/components/Nav/MobileNav";
 import { NavItem as Mnav } from "@/components/Nav/NavItemMobile";
-import logo from "../../public/images/Logo-png-min.png";
+import logo from "../../public/images/malie-Logo.svg";
 import Navbar from "@/components/Nav/navbar";
 import Section from "@/components/section";
 import BlobBg from "@/components/BlobBg";
@@ -183,16 +183,18 @@ const DetailPersonal = () => {
         <Section
           ref={ref}
           sectionName="personal"
-          header="Personal Training"
+          header="Events"
           text=""
         >
           <DetailHero
-            altText={"Personal Training"}
-            alternativeSub={"Deine Events"}
+            altText={"Events"}
+            alternativeSub={"...die unvergessliche Erlebnisse bescheren"}
             text="Ich bin deine Trainerin und ich biete dir und deinen weiblichen Gästen eine unvergessliche Erfahrung, die sich auf Bewegung, Teamwork und Spaß konzentriert. Meine Sportevents sind perfekt für Frauen, die auf der Suche nach einer aktiven und unterhaltsamen Art der Veranstaltung sind.
             Mit meinen Sportevents kannst du sicherstellen, dass dein Event zu einem unvergesslichen Erlebnis wird. Meine Angebote umfassen verschiedene Aktivitäten, die auf die Bedürfnisse und Interessen von Frauen zugeschnitten sind. Egal, ob du nach einer Herausforderung suchst oder einfach nur eine entspannte Zeit mit Freundinnen verbringen möchtest, ich habe das perfekte Event für dich.
             "
-            image={"/images/freundinnen.webp"}
+            image={"/images/events.webp"}
+            image2={"/images/P1980976-scaled.webp"}
+            image3={"/images/P1990169.webp"}
           ></DetailHero>
         </Section>
       </InView>
@@ -212,11 +214,13 @@ const DetailPersonal = () => {
       >
         <Section sectionName="">
           <DetailHero
-            altText={"Personal Training"}
+            altText={"Events"}
             alternativeSub={"Was erwartet dich?"}
             text="Ich biete auch Hula Hoop Fitness als Teil meines Sportevent-Angebots für Frauen an. Hula Hoop ist nicht nur eine unterhaltsame Aktivität, sondern auch ein großartiges Workout für den gesamten Körper. Diese Sportart kann auf jede Fitnessstufe angepasst werden und ist daher für Frauen jeden Alters geeignet.
             Während meines Hula Hoop Fitness Events für Frauen werde ich dich und deine Gäste durch verschiedene Übungen führen, die auf die Stärkung der Bauch-, Bein- und Rückenmuskulatur abzielen. Hula Hoop ist auch ein großartiges Cardio-Training und hilft dabei, den Stoffwechsel anzukurbeln und Kalorien zu verbrennen"
-            image={"/images/freundinnen.webp"}
+            image={"/images/P1990083.webp"}
+            image2={"/images/P1990098.webp"}
+            image3={"/images/P1980976.webp"}
           ></DetailHero>
         </Section>
       </InView>
@@ -236,12 +240,14 @@ const DetailPersonal = () => {
       >
         <Section animate={controls}>
           <DetailHero
-            altText={"Personal Training"}
+            altText={"Events"}
             alternativeSub={"Mehr als Coaching"}
             text="Als erfahrene Trainerin weiß ich, wie wichtig es ist, dass jede Teilnehmerin meiner Sportevents Spaß hat und sich wohl fühlt. Deshalb werde ich dafür sorgen, dass du und deine weiblichen Gäste eine großartige Zeit haben werden. Ich werde mich um alle Details kümmern und sicherstellen, dass alles reibungslos verläuft.
             Meine Sportevents eignen sich auch hervorragend als Teambuilding-Aktivitäten für Frauen. Ich habe Erfahrung in der Arbeit mit Frauenteams und kann dir helfen, dein Team zu motivieren und zu stärken. 
             "
-            image={"/images/freundinnen.webp"}
+            image={"/images/P1990213.webp"}
+            image2={"/images/P1990088.webp"}
+            image3={"/images/P1990545.webp"}
           ></DetailHero>
         </Section>
       </InView>
@@ -261,11 +267,13 @@ const DetailPersonal = () => {
       >
         <Section animate={controls}>
           <DetailHero
-            altText={"Personal Training"}
+            altText={"Events"}
             alternativeSub={"Worauf wartest du?"}
             text="Durch meine Aktivitäten können sich deine Mitarbeiterinnen besser kennenlernen und ihre Teamfähigkeit verbessern. Und das Beste ist: All dies geschieht in einer entspannten und unterhaltsamen Atmosphäre, die das Engagement und die Motivation deiner Mitarbeiterinnen erhöht.
             Also, wenn du auf der Suche nach einem einzigartigen und unterhaltsamen Event für Frauen bist, das auf Bewegung, Teamwork und Spaß basiert, dann melde dich bei mir und lass uns gemeinsam dein perfektes Sportevent für Frauen planen!"
-            image={"/images/freundinnen.webp"}
+            image={"/images/P1990123.webp"}
+            image2={"/images/P1990131.webp"}
+            image3={"/images/P1990093.webp"}
           ></DetailHero>
         </Section>
       </InView>
@@ -285,7 +293,7 @@ const DetailPersonal = () => {
         }}
       >
         <Section animate={controls} header="Deine Vorteile">
-          <div className="lr__wrapper text">
+          <motion.div className="lr__wrapper text">
             <motion.div
               variants={list_varianst}
               initial="hidden"
@@ -312,6 +320,7 @@ const DetailPersonal = () => {
               animate={list_controls}
               exit="exit"
               className="right-wrapper"
+              style={{flexDirection:"column"}}
             >
               <motion.li variants={item_variants} className="detail">
                 <FontAwesomeIcon icon={faArrowRight} />
@@ -322,7 +331,7 @@ const DetailPersonal = () => {
                 Gemeinschaft und Spaß
               </motion.li>
             </motion.div>
-          </div>
+          </motion.div>
         </Section>
       </InView>
     </>

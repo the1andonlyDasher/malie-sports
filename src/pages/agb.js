@@ -3,6 +3,8 @@ import React from "react";
 import Navbar from "@/components/Nav/navbar";
 import BlobBg from "@/components/BlobBg";
 import { motion } from "framer-motion";
+import Footer from "@/components/footer/Footer";
+import FooterLink from "@/components/footer/footerLink";
 
 const header_variants = {
     initial: { opacity: 0 },
@@ -99,6 +101,10 @@ const Agb = () => {
         </motion.p>
         </motion.div>
       </Section>
+      <Footer footerText="Malie © 2023">
+          <FooterLink linkName="Impressum" target="/impressum"/>
+          <FooterLink linkName="Datenschutz" target="datenschutz"/>
+        </Footer>
     </>
   );
 };
