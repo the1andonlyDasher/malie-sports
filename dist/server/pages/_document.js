@@ -21,7 +21,7 @@ var jsx_runtime_ = __webpack_require__(997);
 // EXTERNAL MODULE: ./node_modules/next/document.js
 var next_document = __webpack_require__(6859);
 ;// CONCATENATED MODULE: ./src/components/loader/Loader.js
-/* harmony default export */ const Loader = (`
+const style = `
 body{
 display: block;
 }
@@ -59,7 +59,7 @@ display: block;
   @keyframes s7 {
     100% {transform: rotate(1turn)}
   }
-   `);
+   `;
 
 ;// CONCATENATED MODULE: ./src/pages/_document.js
 
@@ -74,7 +74,7 @@ function Document() {
                     /*#__PURE__*/ (0,jsx_runtime_.jsxs)("style", {
                         children: [
                             " ",
-                            Loader
+                            style
                         ]
                     }),
                     /*#__PURE__*/ jsx_runtime_.jsx("meta", {

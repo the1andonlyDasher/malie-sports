@@ -1,9 +1,13 @@
 /** @type {import('next').NextConfig} */
 
+
+
 const withPWA = require('next-pwa')({
   dest: 'public',
   disable: false,
   register: true,
+  mode:"production",
+
   // disable: process.env.NODE_ENV === 'development',
   // register: true,
   // scope: '/app',
@@ -12,15 +16,12 @@ const withPWA = require('next-pwa')({
 })
 
 module.exports = withPWA({
-  // next.js config
-})
-
-const nextConfig = {
   reactStrictMode: true,
   output: "export",
-  distDir: "dist"
+  distDir: 'dist',
+});
 
-}
 
-module.exports = nextConfig
+
+
 
