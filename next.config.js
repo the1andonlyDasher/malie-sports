@@ -17,6 +17,8 @@ module.exports = withPWA({
 
 const nextConfig = {
   reactStrictMode: true,
+  output: "export",
+  distDir: "dist"
 
 }
 
