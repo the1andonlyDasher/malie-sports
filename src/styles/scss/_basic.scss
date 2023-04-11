@@ -481,7 +481,7 @@ div[data-scroll-content] .frame:first-child {
   background-color: var(--clr-bright-color);
   z-index: -2;
   display: none;
-  @include mq(medium){
+  @include mq(large){
     display: block;
   }
 }
@@ -491,7 +491,7 @@ div[data-scroll-content] .frame:first-child {
   position: fixed;
   background-color: var(--clr-bright-color);
   z-index: -2;
-  @include mq(medium){
+  @include mq(large){
     display: none;
   }
 }
