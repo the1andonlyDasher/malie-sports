@@ -1,12 +1,12 @@
 import { Html, Head, Main, NextScript } from 'next/document'
-import Loader from '@/components/loader/Loader'
+import {style} from '@/components/loader/Loader'
 
 export default function Document() {
   return (
     
     <Html lang="en">
       <Head>
-      <style> {Loader}</style>
+      <style> {style}</style>
         <meta name="application-name" content="Malie Sports" />
 <meta name="apple-mobile-web-app-capable" content="yes" />
 <meta name="apple-mobile-web-app-status-bar-style" content="default" />

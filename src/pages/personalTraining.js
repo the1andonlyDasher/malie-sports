@@ -114,7 +114,7 @@ const DetailPersonal = () => {
         setFirst(false);
       }
     }
-  }, [inView, first, inView, list_controls]);
+  }, [inView, first, inView, list_controls, controls, listInView]);
   const { scrollYProgress } = useScroll()
   const pathLength = useSpring(scrollYProgress, {bounce: 0, stiffness: 500, damping: 50})
   return (
