@@ -2,13 +2,5 @@
   "/_app": "pages/_app.js",
   "/_error": "pages/_error.js",
   "/_document": "pages/_document.js",
-  "/agb": "pages/agb.html",
-  "/api/hello": "pages/api/hello.js",
-  "/datenschutz": "pages/datenschutz.html",
-  "/events": "pages/events.html",
-  "/freundinnenTraining": "pages/freundinnenTraining.html",
-  "/impressum": "pages/impressum.html",
-  "/": "pages/index.html",
-  "/personalTraining": "pages/personalTraining.html",
-  "/404": "pages/404.html"
+  "/": "pages/index.js"
 }

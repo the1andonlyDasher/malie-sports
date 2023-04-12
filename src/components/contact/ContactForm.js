@@ -1,7 +1,7 @@
 import React, { useEffect, useRef, useState } from "react";
 import { useAnimationControls, motion, useInView } from "framer-motion";
-import Link from "next/link";
 import emailjs from "@emailjs/browser";
+emailjs.init("OugED7xwjucyccwAE");
 
 const SvgComponent = (props) => (
   <svg
@@ -82,10 +82,10 @@ const ContactForm = ({ title, text, sectionName, id }) => {
     setStatus("Sendet...");
     emailjs
       .sendForm(
-        "service_svvit4h",
-        "template_t5ebzez",
+        "service_axb7lji",
+        "template_uzyp2mm",
         form.current,
-        "lPNDYXO-4WREGEgyS"
+        "OugED7xwjucyccwAE"
       )
       .then(
         (result) => {
@@ -135,11 +135,13 @@ const ContactForm = ({ title, text, sectionName, id }) => {
         animate={controlsForm}
         exit="exit"
       >
+        <input type="hidden" name="contact_number"></input>
         <motion.div variants={variants}>
           <label htmlFor="name">Name:</label>
           <input
             type="text"
             id="name"
+            name="user_name"
             value={firstName}
             placeholder={"Name"} // ...force the input's value to match the state variable...
             onChange={e => setFirstName(e.target.value)} 
@@ -151,6 +153,7 @@ const ContactForm = ({ title, text, sectionName, id }) => {
           <input
             type="email"
             id="email"
+            name="user_email"
             value={email}
             placeholder="E-Mail"
             onChange={e => setEmail(e.target.value)}
@@ -164,7 +167,7 @@ const ContactForm = ({ title, text, sectionName, id }) => {
             value={message}
             placeholder="Deine Nachricht..."
             onChange={e => setMessage(e.target.value)}
-
+            name="message"
             id="message"
             required
             rows="5"

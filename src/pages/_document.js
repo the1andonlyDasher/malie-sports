@@ -81,7 +81,7 @@ export default function Document() {
 
       <body>
         <div id={"globalLoader"}>
-        <div class="custom-loader"></div>
+        <div className="custom-loader"></div>
         </div>
         <Main />
         <NextScript />
