@@ -188,7 +188,7 @@ const DetailPersonal = () => {
         >
           <DetailHero
             altText={"Events"}
-            alternativeSub={"...die unvergessliche Erlebnisse bescheren"}
+            alternativeSub={"...die unvergessliche Erlebnisse bescheren!"}
             text="Ich bin deine Trainerin und ich biete dir und deinen weiblichen Gästen eine unvergessliche Erfahrung, die sich auf Bewegung, Teamwork und Spaß konzentriert. Meine Sportevents sind perfekt für Frauen, die auf der Suche nach einer aktiven und unterhaltsamen Art der Veranstaltung sind.
             Mit meinen Sportevents kannst du sicherstellen, dass dein Event zu einem unvergesslichen Erlebnis wird. Meine Angebote umfassen verschiedene Aktivitäten, die auf die Bedürfnisse und Interessen von Frauen zugeschnitten sind. Egal, ob du nach einer Herausforderung suchst oder einfach nur eine entspannte Zeit mit Freundinnen verbringen möchtest, ich habe das perfekte Event für dich.
             "

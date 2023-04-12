@@ -217,7 +217,7 @@ const DetailPersonal = () => {
       >
         <Section sectionName="">
           <DetailHero
-            altText={"Personal Training"}
+            altText={"Freundinnen Training"}
             alternativeSub={"Was erwartet dich?"}
             text="Selbstverständlich könnt ihr eure Kinder mitbringen, denn das Training soll für euch so stressfrei wie möglich sein. Ihr habt die Möglichkeit, das Workout bei euch zu Hause durchzuführen oder in einem nahegelegenen Park an der frischen Luft zu trainieren. Die Wahl des Ortes hängt ganz von euren Vorlieben und Bedürfnissen ab."
             image={"/images/P1990355.webp"}
