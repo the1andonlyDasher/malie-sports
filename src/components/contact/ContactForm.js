@@ -109,7 +109,7 @@ const ContactForm = ({ title, text, sectionName, id }) => {
     if (inView) {
       controlsForm.start("enter");
     }
-  }, [inView]);
+  }, [inView, controlsForm]);
 
   return (
     <>

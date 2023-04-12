@@ -1,4 +1,4 @@
-export default `
+export  const style= `
 body{
 display: block;
 }

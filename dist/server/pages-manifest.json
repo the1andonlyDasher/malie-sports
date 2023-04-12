@@ -2,5 +2,17 @@
   "/_app": "pages/_app.js",
   "/_error": "pages/_error.js",
   "/_document": "pages/_document.js",
+<<<<<<< HEAD
   "/": "pages/index.js"
+=======
+  "/api/hello": "pages/api/hello.js",
+  "/agb": "pages/agb.html",
+  "/datenschutz": "pages/datenschutz.html",
+  "/freundinnenTraining": "pages/freundinnenTraining.html",
+  "/impressum": "pages/impressum.html",
+  "/events": "pages/events.html",
+  "/": "pages/index.html",
+  "/personalTraining": "pages/personalTraining.html",
+  "/404": "pages/404.html"
+>>>>>>> d2b022680a35ba90b5761ff0dee51affee7887d7
 }

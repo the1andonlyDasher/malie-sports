@@ -7,7 +7,6 @@ import HeroImage from "@/components/HeroImage";
 import personal_svg from "../../public/images/personal_o.svg";
 import freundinnen_svg from "../../public/images/freundinnen_o.svg";
 import events_svg from "../../public/images/events_o.svg";
-import malie from "../../public/images/5f8312169ee77-_1_.webp";
 import { useEffect, useState } from "react";
 import ContactForm from "@/components/contact/ContactForm";
 import Footer from "@/components/footer/Footer";
@@ -71,7 +70,7 @@ export default function Home() {
   
 
 
-  },[inView, first]);
+  },[inView, first, controls, video_controls]);
 
 
 
@@ -200,7 +199,7 @@ export default function Home() {
           <Section id="about" sectionName="about">
             <HeroImage
               altText="Foto von Malie"
-              image={malie}
+              image={"/images/malie.webp"}
               firstTitle="Hi, ich bin Saskia!"
               alternativeSub="Trainerin für Mütter Hulla Hoop Trainerin und Personal Coach"
               text="Hallo, ich bin Saskia - Personal Coach, Trainerin für Mütter und Frauen sowie Hula Hoop Trainerin und Beckenbodenexpertin. Als Mama von zwei großartigen Jungs bin ich sport- und naturverliebt und auch als Partnerin, Freundin und Liebhaberin stehe ich mitten im Leben.

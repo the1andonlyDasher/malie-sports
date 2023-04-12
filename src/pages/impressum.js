@@ -5,6 +5,7 @@ import BlobBg from "@/components/BlobBg";
 import { motion } from "framer-motion";
 import Footer from "@/components/footer/Footer";
 import FooterLink from "@/components/footer/footerLink";
+import logo from "../../public/images/malie-Logo.svg";
 
 const header_variants = {
   initial: { opacity: 0 },
@@ -18,7 +19,6 @@ const header_variants = {
   },
 };
 
-const logo = require("../../public/images/Logo-png-min.png");
 
 const Agb = () => {
   return (
