@@ -188,11 +188,11 @@ const DetailPersonal = () => {
         <Section
           ref={ref}
           sectionName="personal"
-          header="Personal Training"
+          header="Freundinnen Training"
           text=""
         >
           <DetailHero
-            altText={"Personal Training"}
+            altText={"Freundinnen Training"}
             alternativeSub={"Was ist das Freundinnen Training?"}
             text="Als erfahrene Personal Trainerin möchte ich dir und deiner Freundin gerne das Freundinnen Training anbieten, das speziell auf eure individuellen Bedürfnisse und Ziele abgestimmt ist. Egal, ob ihr euch einfach fit halten wollt, eure Ausdauer verbessern oder gezielt Muskeln aufbauen möchtet - wir werden gemeinsam ein effektives Workout planen, das euch dabei unterstützt."
             image={"/images/freundinnen.webp"}
