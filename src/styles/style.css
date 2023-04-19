@@ -1713,6 +1713,10 @@ div[data-scroll-content] .frame:first-child header {
   white-space: nowrap;
 }
 
+#home .left-wrapper {
+  flex-direction: column;
+}
+
 .nav-items-mobile, .navbar__container, .navbar #image-wrapper-blue, .navbar #image-wrapper-white {
   display: flex;
   justify-content: center;

@@ -87,7 +87,6 @@ export default function Home() {
             muted
             autoPlay
             loop
-            poster="/images/freundinnen.webp"
           >
             <track kind="captions" ></track>
             <source src="/videos/video.webm" type="video/webm"  />
