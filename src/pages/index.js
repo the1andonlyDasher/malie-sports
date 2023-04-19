@@ -87,9 +87,12 @@ export default function Home() {
             muted
             autoPlay
             loop
+            poster="/images/freundinnen.webp"
           >
             <track kind="captions" ></track>
+            <source src="/videos/video.webm" type="video/webm"  />
             <source src="/videos/video.mp4" type="video/mp4"  />
+
           </motion.video>
         </BlobBg>
         <motion.div
