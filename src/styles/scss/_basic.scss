@@ -120,7 +120,7 @@ h4,
 h5,
 p,
 .sub {
-  text-align: center;
+  text-align: left;
   margin: 0.25rem auto;
   width: 100%;
   @include mq(large){
@@ -164,7 +164,7 @@ h2 {
   line-height: 1.2;
   margin: var(--space-s) 0;
   @include mq(large){
-    margin: 1rem auto 2rem 0;
+    margin: 1rem auto 1rem 0;
   }
   span{
     display: inline-block;
@@ -202,7 +202,7 @@ p {
   font-weight: inherit;
   color: var(--clr-dark-color);
   max-width: 60ch;
-  margin: var(--space-s) auto;
+  margin: var(--space-s) auto var(--space-s) 0;
   @include mq(large){
   margin: var(--space-xs) auto var(--space-xs) 0;
   }
@@ -227,8 +227,8 @@ red{
   padding: 1rem 2rem;
   overflow: visible;
   flex: 1 1 auto;
-  max-width: 400px;
-  margin: var(--space-s) auto;
+  max-width: 300px;
+  margin: var(--space-s) 0 auto 0;
   a{
     color: var(--clr-bright-color);
   }

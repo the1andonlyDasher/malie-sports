@@ -554,7 +554,7 @@ h4,
 h5,
 p,
 .sub {
-  text-align: center;
+  text-align: left;
   margin: 0.25rem auto;
   width: 100%;
 }
@@ -605,7 +605,7 @@ h2 {
 }
 @media screen and (min-width: 1024px) {
   h2 {
-    margin: 1rem auto 2rem 0;
+    margin: 1rem auto 1rem 0;
   }
 }
 h2 span {
@@ -643,7 +643,7 @@ p {
   font-weight: inherit;
   color: var(--clr-dark-color);
   max-width: 60ch;
-  margin: var(--space-s) auto;
+  margin: var(--space-s) auto var(--space-s) 0;
 }
 @media screen and (min-width: 1024px) {
   p {
@@ -669,8 +669,8 @@ red {
   padding: 1rem 2rem;
   overflow: visible;
   flex: 1 1 auto;
-  max-width: 400px;
-  margin: var(--space-s) auto;
+  max-width: 300px;
+  margin: var(--space-s) 0 auto 0;
 }
 .btn__primary a,
 .btn__outline a {
@@ -1680,10 +1680,11 @@ div[data-scroll-content] .frame:first-child header {
 
 .left-wrapper {
   z-index: 1;
+  align-self: baseline;
 }
 
 .right-wrapper {
-  justify-content: space-evenly;
+  justify-content: flex-start;
   flex-wrap: wrap;
 }
 
@@ -2704,6 +2705,117 @@ ul.transition li {
   margin: var(--space-l) 0;
 }
 
+.image__hero .photo_large {
+  position: relative;
+  overflow: hidden;
+  border-radius: 50%;
+  border: 15px solid var(--clr-bright-color);
+  margin: 0 auto;
+  height: 250px;
+  width: 250px;
+}
+@media screen and (min-width: 500px) {
+  .image__hero .photo_large {
+    height: 350px;
+    width: 350px;
+  }
+}
+@media screen and (min-width: 1024px) {
+  .image__hero .photo_large {
+    margin-right: 0;
+  }
+}
+.image__hero .photo_large img {
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  inset: 0px;
+  object-fit: cover;
+  color: transparent;
+}
+.image__hero .first {
+  scale: 0.6;
+  top: 0;
+  right: -15%;
+  z-index: -2;
+  position: absolute;
+}
+@media screen and (min-width: 500px) {
+  .image__hero .first {
+    right: -5%;
+  }
+}
+@media screen and (min-width: 880px) {
+  .image__hero .first {
+    scale: 0.6;
+    top: 0;
+    right: 0%;
+    z-index: -2;
+  }
+}
+@media screen and (min-width: 1024px) {
+  .image__hero .first {
+    scale: 0.7;
+    top: 100%;
+    right: 0;
+    z-index: -2;
+    position: relative;
+  }
+}
+@media screen and (min-width: 1600px) {
+  .image__hero .first {
+    scale: 0.7;
+    top: 100%;
+    right: 10%;
+    z-index: -2;
+  }
+}
+.image__hero .second {
+  scale: 0.6;
+  top: 0;
+  left: -15%;
+  z-index: -1;
+  position: absolute;
+}
+@media screen and (min-width: 500px) {
+  .image__hero .second {
+    left: -5%;
+  }
+}
+@media screen and (min-width: 880px) {
+  .image__hero .second {
+    scale: 0.6;
+    top: 0;
+    left: 0;
+    z-index: -1;
+  }
+}
+@media screen and (min-width: 1024px) {
+  .image__hero .second {
+    scale: 0.7;
+    top: 100%;
+    right: 10%;
+    z-index: -1;
+    position: relative;
+  }
+}
+@media screen and (min-width: 1600px) {
+  .image__hero .second {
+    scale: 0.7;
+    top: 100%;
+    right: 0;
+    z-index: -2;
+  }
+}
+.image__hero .third {
+  scale: 0.8;
+}
+@media screen and (min-width: 1024px) {
+  .image__hero .third {
+    right: 10%;
+  }
+}
+
 .svg__wrapper, .blob__mobile__detail, .blob__detail {
   top: 0;
   left: 0;
@@ -2829,15 +2941,14 @@ ul.transition li {
   object-fit: cover;
   color: transparent;
 }
-
-.first {
+.detail__hero .first {
   scale: 0.6;
   top: 0;
   right: -10%;
   z-index: -2;
 }
 @media screen and (min-width: 880px) {
-  .first {
+  .detail__hero .first {
     scale: 0.6;
     top: 0;
     right: 0%;
@@ -2845,7 +2956,7 @@ ul.transition li {
   }
 }
 @media screen and (min-width: 1024px) {
-  .first {
+  .detail__hero .first {
     scale: 0.6;
     top: -50%;
     right: 12%;
@@ -2853,22 +2964,21 @@ ul.transition li {
   }
 }
 @media screen and (min-width: 1600px) {
-  .first {
+  .detail__hero .first {
     scale: 0.6;
     top: -50%;
     right: 10%;
     z-index: -2;
   }
 }
-
-.second {
+.detail__hero .second {
   scale: 0.6;
   top: 0;
   left: -10%;
   z-index: -1;
 }
 @media screen and (min-width: 880px) {
-  .second {
+  .detail__hero .second {
     scale: 0.6;
     top: 0;
     left: 0;
@@ -2876,7 +2986,7 @@ ul.transition li {
   }
 }
 @media screen and (min-width: 1024px) {
-  .second {
+  .detail__hero .second {
     scale: 0.5;
     top: -45%;
     right: -20%;
@@ -2884,15 +2994,14 @@ ul.transition li {
   }
 }
 @media screen and (min-width: 1600px) {
-  .second {
+  .detail__hero .second {
     scale: 0.5;
     top: -40%;
     right: -25%;
     z-index: -2;
   }
 }
-
-.third {
+.detail__hero .third {
   scale: 0.8;
 }
 
@@ -2942,6 +3051,15 @@ ul.transition li {
 .svg__wrapper svg {
   display: flex;
   height: 100%;
+}
+
+.arrow__Down {
+  color: "var(--clr-main2-color)";
+  scale: 2;
+  width: 2rem;
+  aspect-ratio: 1;
+  margin: 0 auto;
+  color: var(--clr-main2-color);
 }
 
 :root {

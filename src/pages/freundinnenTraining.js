@@ -141,8 +141,7 @@ const DetailPersonal = () => {
           preserveAspectRatio="none"
           width="100%"
           height="100%"
-          initial="hidden"
-          animate="visible"
+
   
         >
           <motion.line
@@ -152,8 +151,12 @@ const DetailPersonal = () => {
             y2="100%"
             stroke="#491b1b"
             strokeWidth={3}
+            strokeDasharray={10}
+            strokeDashoffset={10}
+            style={{ pathLength: pathLength, pathOffset: "10%", pathSpacing: 0.2  }}
+
             custom={2}
-            style={{ pathLength: pathLength }}
+       
       
           />
         </motion.svg>
@@ -194,10 +197,14 @@ const DetailPersonal = () => {
           <DetailHero
             altText={"Freundinnen Training"}
             alternativeSub={"Was ist das Freundinnen Training?"}
-            text="Als erfahrene Personal Trainerin möchte ich dir und deiner Freundin gerne das Freundinnen Training anbieten, das speziell auf eure individuellen Bedürfnisse und Ziele abgestimmt ist. Egal, ob ihr euch einfach fit halten wollt, eure Ausdauer verbessern oder gezielt Muskeln aufbauen möchtet - wir werden gemeinsam ein effektives Workout planen, das euch dabei unterstützt."
+            text="Dieses maßgeschneiderte Programm ist speziell auf eure individuellen Bedürfnisse und Ziele abgestimmt, um euch dabei zu helfen, eure Fitnessziele zu erreichen und eure Gesundheit zu verbessern.
+            Egal, ob ihr euch einfach fit halten wollt, eure Ausdauer verbessern oder gezielt Muskeln aufbauen möchtet - wir werden gemeinsam ein effektives Workout planen, das zu eurem Lebensstil passt und euch dabei unterstützt, eure Ziele zu erreichen.
+            Wir werden nicht nur körperlich arbeiten, sondern auch geistig und emotional wachsen. Denn ein ganzheitlicher Ansatz ist für mich von großer Bedeutung. Wir werden zusammenarbeiten, um eure Gesundheit und Fitness zu fördern, indem wir Übungen und Aktivitäten auswählen, die eure Bedürfnisse und Fähigkeiten berücksichtigen.
+            "
             image={"/images/freundinnen.webp"}
             image2={"/images/P1990401.webp"}
             image3={"/images/P1990002.webp"}
+            arrow={true}
           ></DetailHero>
         </Section>
       </InView>
@@ -218,11 +225,14 @@ const DetailPersonal = () => {
         <Section sectionName="">
           <DetailHero
             altText={"Freundinnen Training"}
-            alternativeSub={"Was erwartet dich?"}
-            text="Selbstverständlich könnt ihr eure Kinder mitbringen, denn das Training soll für euch so stressfrei wie möglich sein. Ihr habt die Möglichkeit, das Workout bei euch zu Hause durchzuführen oder in einem nahegelegenen Park an der frischen Luft zu trainieren. Die Wahl des Ortes hängt ganz von euren Vorlieben und Bedürfnissen ab."
+            alternativeSub={"Was erwartet Euch?"}
+            text="Ein Training der besonderen Art – alles andere aber ganz sicher nicht langweilig. Ob mit oder ohne Kinder entscheidet ihr. Ihr bekommt ein maßgeschneidertes, auf euch beide perfekt abgestimmtes Programm. In einem Vorgespräch besprechen wir eure Wünsche und eure körperlichen Ziele. Auch ganz unterschiedliche Ziele sind wunderbar zu kombinieren, so dass ihr zusammen Sport und sogar die gleichen Übungen machen könnt. Mit einer Mischung aus Kräftigungsübungen, Prä- und Postnatalem Training, Ausdauertraining und Mobilisierungsübungen verhelfe ich euch zu ganz neuer Energie. Dabei kann natürlich auch das Thema Ernährung zusätzlich einfließen. 
+            Ich werde euch motivieren, euch herausfordern und eure Fortschritte im Auge behalten. Dabei werde ich euch stets unterstützen und euch mit wertvollen Tipps und Ratschlägen zur Seite stehen.
+            "
             image={"/images/P1990355.webp"}
             image2={"/images/P1990396.webp"}
             image3={"/images/P1990689.webp"}
+            arrow={false}
           ></DetailHero>
         </Section>
       </InView>
@@ -248,6 +258,7 @@ const DetailPersonal = () => {
             image={"/images/P1990083.webp"}
             image2={"/images/P1980895.webp"}
             image3={"/images/P1980759.webp"}
+            arrow={false}
           ></DetailHero>
         </Section>
       </InView>

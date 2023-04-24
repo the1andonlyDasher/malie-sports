@@ -1,4 +1,4 @@
-import { motion  } from "framer-motion";
+import { motion } from "framer-motion";
 import Image from "next/image";
 import React, { useRef } from "react";
 
@@ -85,23 +85,52 @@ const HeroImage = ({
   altText,
   btn_txt,
   btn_txt_sec,
-  image,
+  image1,
+  image2,
+  image3,
 }) => {
   const ref = useRef();
   return (
-    <motion.div         initial="initial"
-    whileInView="enter"
-    viewport={{margin:"100px 0px 100px 0px"}}
-    exit="exit"ref={ref}>
-      <motion.div
-variants={wrapper_variants}
-        className="lr__wrapper"
-      >
-        <motion.div  className="left-wrapper">
-          <motion.div className="photo_large" variants={image_variants}>
+    <motion.div
+      initial="initial"
+      className="image__hero"
+      whileInView="enter"
+      viewport={{ margin: "100px 0px 100px 0px" }}
+      exit="exit"
+      ref={ref}
+    >
+ <motion.div variants={wrapper_variants} className="lr__wrapper mobile">
+        <motion.div className="left-wrapper">
+        <motion.div className="photo_large first" variants={image_variants}>
             <Image
               alt={altText}
-              src={image}
+              src={image1}
+              placeholder="empty"
+              fill
+              quality={100}
+              sizes="100%"
+              style={{
+                objectFit: "cover",
+              }}
+            />
+          </motion.div>
+          <motion.div className="photo_large third" variants={image_variants}>
+            <Image
+              alt={altText}
+              src={image2}
+              placeholder="empty"
+              quality={100}
+              fill
+              sizes="100%"
+              style={{
+                objectFit: "cover",
+              }}
+            />
+          </motion.div>
+          <motion.div className="photo_large second" variants={image_variants}>
+            <Image
+              alt={altText}
+              src={image3}
               placeholder="empty"
               quality={100}
               fill
@@ -113,10 +142,14 @@ variants={wrapper_variants}
           </motion.div>
         </motion.div>
         <motion.div variants={header_variants} className="right-wrapper">
-          <h2>
-            {firstTitle}
+        {firstTitle ? (
+            <h2>
+              {firstTitle}
+              <span>{secondTitle ? <red>{secondTitle}</red> : null}</span>
+            </h2>
+          ) : (
             <span>{secondTitle ? <red>{secondTitle}</red> : null}</span>
-          </h2>
+          )}
           {alternativeSub ? <h3>{alternativeSub}</h3> : null}
           <p>{text}</p>
           <p className="sub">{subtitle} </p>
@@ -137,6 +170,81 @@ variants={wrapper_variants}
                 {btn_txt_sec}
               </motion.button>
             ) : null}
+          </motion.div>
+         
+        </motion.div>
+      </motion.div>
+      <motion.div variants={wrapper_variants} className="lr__wrapper desktop">
+        <motion.div className="left-wrapper">
+          {firstTitle ? (
+            <h2>
+              {firstTitle}
+              <span>{secondTitle ? <red>{secondTitle}</red> : null}</span>
+            </h2>
+          ) : (
+            <span>{secondTitle ? <red>{secondTitle}</red> : null}</span>
+          )}
+          {alternativeSub ? <h3>{alternativeSub}</h3> : null}
+          <p>{text}</p>
+          <p className="sub">{subtitle} </p>
+          <motion.div className="button__wrapper" variants={wrapper_variants}>
+            {btn_txt ? (
+              <motion.button
+                variants={button_variants}
+                className="btn__primary"
+              >
+                {btn_txt}
+              </motion.button>
+            ) : null}
+            {btn_txt_sec ? (
+              <motion.button
+                variants={button_variants}
+                className="btn__outline"
+              >
+                {btn_txt_sec}
+              </motion.button>
+            ) : null}
+          </motion.div>
+        </motion.div>
+        <motion.div variants={header_variants} className="right-wrapper">
+          <motion.div className="photo_large first" variants={image_variants}>
+            <Image
+              alt={altText}
+              src={image1}
+              placeholder="empty"
+              fill
+              quality={100}
+              sizes="100%"
+              style={{
+                objectFit: "cover",
+              }}
+            />
+          </motion.div>
+          <motion.div className="photo_large third" variants={image_variants}>
+            <Image
+              alt={altText}
+              src={image2}
+              placeholder="empty"
+              quality={100}
+              fill
+              sizes="100%"
+              style={{
+                objectFit: "cover",
+              }}
+            />
+          </motion.div>
+          <motion.div className="photo_large second" variants={image_variants}>
+            <Image
+              alt={altText}
+              src={image3}
+              placeholder="empty"
+              quality={100}
+              fill
+              sizes="100%"
+              style={{
+                objectFit: "cover",
+              }}
+            />
           </motion.div>
         </motion.div>
       </motion.div>

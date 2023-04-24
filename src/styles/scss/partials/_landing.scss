@@ -61,12 +61,13 @@
 
 .left-wrapper {
   z-index: 1;
+  align-self: baseline;
 }
 
 .right-wrapper {
   @extend %flex-center;
   // min-height: calc(30vh + 10em);
-  justify-content: space-evenly;
+  justify-content: flex-start;
   flex-wrap: wrap
 }
 

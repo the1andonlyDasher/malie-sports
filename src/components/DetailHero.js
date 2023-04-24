@@ -1,4 +1,6 @@
-import { motion, useInView, useAnimationControls } from "framer-motion";
+import { faArrowCircleDown, faArrowDown } from "@fortawesome/free-solid-svg-icons";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { motion, useInView, useAnimationControls, useCycle } from "framer-motion";
 import Image from "next/image";
 import React, { useRef, useEffect } from "react";
 
@@ -68,6 +70,12 @@ const button_variants = {
   },
 };
 
+const arrow_variants = {
+  initial: {opacity: 0},
+  enter: {y:[0, 10], opacity:[0,1], transition:{repeat: Infinity, duration: 1.5, type:"spring"}},
+  exit:{opacity: 0}
+}
+
 const image_variants = {
   initial: { opacity: 0, clipPath: "circle(0% at 50% 50%)" },
   enter: { opacity: 1, clipPath: "circle(100% at 50% 50%)" },
@@ -85,7 +93,8 @@ const DetailHero = ({
   btn_txt_sec,
   image,
   image2,
-  image3
+  image3,
+  arrow
 }) => {
   const ref = useRef();
   const inView = useInView(ref, { once: true, margin: "0px" });
@@ -181,6 +190,7 @@ const DetailHero = ({
             {alternativeSub ? <h3>{alternativeSub}</h3> : null}
             <p>{text}</p>
             <p className="sub">{subtitle} </p>
+            {arrow ?  <motion.div className="arrow__Down" variants={arrow_variants}><FontAwesomeIcon icon={faArrowDown}/></motion.div> : null}
             {btn_txt || btn_txt_sec ? (
               <motion.div
                 className="button__wrapper"
@@ -217,6 +227,7 @@ const DetailHero = ({
             {alternativeSub ? <h3>{alternativeSub}</h3> : null}
             <p>{text}</p>
             <p className="sub">{subtitle} </p>
+            {arrow ? (<motion.div className="arrow__Down" variants={arrow_variants}><FontAwesomeIcon icon={faArrowDown}/></motion.div>) : null}
             {btn_txt || btn_txt_sec ? (
               <motion.div
                 className="button__wrapper"

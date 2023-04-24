@@ -4,7 +4,7 @@ import { motion } from "framer-motion";
 const blob_variants = {
     hidden: { clipPath: "circle(0% at 50% 50%)" },
     enter: {
-      clipPath: "circle(100% at 50% 50%)",
+      clipPath: "circle(80% at 50% 50%)",
       transition: {
         duration: 0.75,
         delay: .5,

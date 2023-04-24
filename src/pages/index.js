@@ -31,7 +31,8 @@ const blob_variants = {
   exit: { clipPath: "circle(0% at 15% 51%)" },
   home: {clipPath: "circle(50% at 15% 51%)"},
   training: { clipPath: "circle(70% at 50% 0%)" },
-  about: { clipPath: "circle(84% at 100% 50%)" },
+  // about: { clipPath: "circle(84% at 100% 50%)" },
+  about: { clipPath: "circle(50% at 15% 51%)" },
   contact: { clipPath: "circle(70% at 20% 20%)" },
 };
 
@@ -197,17 +198,32 @@ export default function Home() {
           : null
       }
         >
-          <Section id="about" sectionName="about">
+          <Section id="about" sectionName="about" header="Hi, ich bin Saskia!">
             <HeroImage
               altText="Foto von Malie"
-              image={"/images/malie.webp"}
-              firstTitle="Hi, ich bin Saskia!"
+              image1={"/images/malie.webp"}
+              image2={"/images/saskia2.webp"}
+              image3={"/images/saskia3.webp"}
               alternativeSub="Trainerin für Mütter Hula Hoop Trainerin und Personal Coach"
-              text="Hallo, ich bin Saskia - Personal Coach, Trainerin für Mütter und Frauen sowie Hula Hoop Trainerin und Beckenbodenexpertin. Als Mama von zwei großartigen Jungs bin ich sport- und naturverliebt und auch als Partnerin, Freundin und Liebhaberin stehe ich mitten im Leben.
-              Der Sport begleitet mich bereits seit meinem dritten Lebensjahr. Von Kunstturnen über Prellball bis hin zum Rhönrad habe ich mich immer für ungewöhnliche Sportarten begeistert. Auch heute noch ist der Sport ein wichtiger Bestandteil meines Lebens.
-              Nach der Geburt meines ersten Kindes war es mir besonders wichtig, mich wieder wohl in meinem Körper zu fühlen und zu meiner starken Mitte zurückzufinden. Als ich das für mich erreicht hatte, wollte ich auch anderen Müttern und Frauen auf ihrem Weg zu einem positiven Körpergefühl begleiten.
-              Seit 2020 arbeite ich mit meinem Herzensprojekt Malie als Prä- und Postnatale Fitnesstrainerin, Hula Hoop Trainerin, Personal Coach und Ernährungsberaterin selbstständig. Es erfüllt mich mit großer Freude, andere Frauen auf ihrem Weg zu ihrer ganz persönlichen Stärke zu begleiten.
-              Ich freue mich darauf, auch dich auf deinem Weg zu begleiten!
+              text="Willkommen in meiner Welt, ich bin Saskia - eine Powerfrau, die für Fitness und Natur brennt! Als
+              Personal Coach, Prä- und Postnatale Fitnesstrainerin, Fitnesstrainerin für Hula Hoop,
+              Beckenbodenexpertin und Ernährungsberaterin lebe ich meine Leidenschaft jeden Tag aufs Neue
+              aus. Mit meinen zwei Jungs an meiner Seite und meiner aktiven Lebensweise als Partnerin und
+              Freundin und bin ich immer mitten im Leben.
+              
+              Sport war schon immer mein treuer Begleiter. Seit meinem dritten Lebensjahr habe ich mich für
+              ungewöhnliche Sportarten begeistert, von Kunstturnen zum Turnen im Rhönrad, Prellball und Thai-
+              Kickboxen. Auch heute noch ist der Sport ein wichtiger Bestandteil meines Lebens. Nach der Geburt
+              meines ersten Kindes war es für mich eine Herzensangelegenheit, meine körperliche Stärke
+              wiederzufinden und mich in meinem Körper wohlzufühlen. Als ich dieses Ziel erreichte, wusste ich,
+              dass ich auch anderen Müttern und Frauen auf ihrem Weg zu einem positiven Körpergefühl helfen
+              möchte. Bereits während meiner ersten Schwangerschaft habe ich mich zum Coach ausbilden lassen.
+              Danach folgten weitere und für mich richtungsweisende Aus- und Weiterbildungen.
+              Seit 2020 arbeite ich an meinem Herzensprojekt Malie als Personal Coach, Prä- und Postnatale
+              Fitnesstrainerin, Fitnesstrainerin für Hula Hoop, Beckenbodenexpertin und Ernährungsberaterin. Es
+              erfüllt mich mit großer Freude, Frauen auf ihrem Weg zu ihrer ganz persönlichen Stärke zu begleiten.
+              Ich bin hier, um dich zu motivieren und dich auf deinem Weg zu begleiten - gemeinsam werden wir
+              deine Ziele erreichen und deine Träume verwirklichen!
               "
             />
           </Section>
@@ -229,8 +245,8 @@ export default function Home() {
             id="contact"
             sectionName="contact"
             header={"Kontakt"}
-            text="Du möchtest einen Kurs buchen, oder hast eine Frage? Kontaktiere
-            mich hier oder schreib eine E-Mail an kontakt@malie-sports.de"
+            text="Du interessierst Dich für mein Angebot, hast Fragen zu Preisen und Dauer? Kontaktiere mich hier
+            oder schreibe mir eine Mail an saskia@malie-sports.de. Ich freue mich von Dir zu lesen."
           >
             <ContactForm />
           </Section>

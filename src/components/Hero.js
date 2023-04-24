@@ -23,7 +23,7 @@ const variants = {
 const Hero = () => {
     return (
         <>
-        <div className="__s__b">
+
           <div className="lr__wrapper">
             <motion.div className="left-wrapper" 
                   variants={variants}
@@ -37,12 +37,12 @@ const Hero = () => {
               Kräftigungsübungen zu einem positiven Körpergefühl.
               </p>
 
-              <button type="button" className="btn__primary">Jetzt loslegen</button>
+              <button type="button" className="btn__primary"><a href="#contact">Jetzt loslegen</a></button>
 
             </motion.div>
             <div className="right-wrapper"></div>
           </div>
-        </div>
+
         </>
     );
 }

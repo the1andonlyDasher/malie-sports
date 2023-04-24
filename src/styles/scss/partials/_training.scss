@@ -128,61 +128,62 @@
       color: transparent;
     }
   }
-}
-
-.first {
-  scale: 0.6;
-  top: 0;
-  right: -10%;
-  z-index: -2;
-
-  @include mq(medium) {
+  .first {
     scale: 0.6;
     top: 0;
-    right: 0%;
+    right: -10%;
     z-index: -2;
+  
+    @include mq(medium) {
+      scale: 0.6;
+      top: 0;
+      right: 0%;
+      z-index: -2;
+    }
+    @include mq(large) {
+      scale: 0.6;
+      top: -50%;
+      right: 12%;
+      z-index: -2;
+    }
+    @include mq(xl) {
+      scale: 0.6;
+      top: -50%;
+      right: 10%;
+      z-index: -2;
+    }
   }
-  @include mq(large) {
-    scale: 0.6;
-    top: -50%;
-    right: 12%;
-    z-index: -2;
-  }
-  @include mq(xl) {
-    scale: 0.6;
-    top: -50%;
-    right: 10%;
-    z-index: -2;
-  }
-}
-.second {
-  scale: 0.6;
-  top: 0;
-  left: -10%;
-  z-index: -1;
-
-  @include mq(medium) {
+  .second {
     scale: 0.6;
     top: 0;
-    left: 0;
+    left: -10%;
     z-index: -1;
+  
+    @include mq(medium) {
+      scale: 0.6;
+      top: 0;
+      left: 0;
+      z-index: -1;
+    }
+    @include mq(large) {
+      scale: 0.5;
+      top: -45%;
+      right: -20%;
+      z-index: -1;
+    }
+    @include mq(xl) {
+      scale: 0.5;
+      top: -40%;
+      right: -25%;
+      z-index: -2;
+    }
   }
-  @include mq(large) {
-    scale: 0.5;
-    top: -45%;
-    right: -20%;
-    z-index: -1;
-  }
-  @include mq(xl) {
-    scale: 0.5;
-    top: -40%;
-    right: -25%;
-    z-index: -2;
+  .third {
+    scale: 0.8;
   }
 }
-.third {
-  scale: 0.8;
-}
+
+
 
 .detail {
   margin: 1rem 0;
@@ -229,4 +230,13 @@
     display: flex;
     height: 100%;
   }
+}
+
+.arrow__Down{
+  color:"var(--clr-main2-color)";
+  scale: 2;
+  width: 2rem;
+  aspect-ratio: 1;
+  margin:0 auto;
+  color: var(--clr-main2-color)
 }
