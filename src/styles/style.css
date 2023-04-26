@@ -554,7 +554,7 @@ h4,
 h5,
 p,
 .sub {
-  text-align: justify;
+  text-align: left;
   margin: 0.25rem auto;
   width: 100%;
 }
@@ -568,7 +568,7 @@ p,
   .sub {
     margin: var(--space-s) auto var(--space-s) 0;
     width: 100%;
-    text-align: justify;
+    text-align: left;
   }
 }
 
@@ -638,6 +638,7 @@ h5 {
 p {
   font-size: var(--fs-text);
   font-family: "Josefin Sans", sans-serif;
+  text-align: justify;
   width: 100%;
   line-height: 1.5;
   font-weight: inherit;
