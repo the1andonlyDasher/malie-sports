@@ -120,13 +120,13 @@ h4,
 h5,
 p,
 .sub {
-  text-align: left;
+  text-align: justify;
   margin: 0.25rem auto;
   width: 100%;
   @include mq(large){
     margin: var(--space-s) auto var(--space-s) 0;
     width: 100%;
-    text-align: left;
+    text-align: justify;
   }
 }
 

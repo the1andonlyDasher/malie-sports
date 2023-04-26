@@ -195,6 +195,7 @@ const DetailPersonal = () => {
             image={"/images/events.webp"}
             image2={"/images/P1980976-scaled.webp"}
             image3={"/images/P1990169.webp"}
+            arrow={true}
           ></DetailHero>
         </Section>
       </InView>

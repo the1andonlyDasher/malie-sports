@@ -204,7 +204,7 @@ export default function Home() {
               image1={"/images/malie.webp"}
               image2={"/images/saskia2.webp"}
               image3={"/images/saskia3.webp"}
-              alternativeSub="Trainerin für Mütter Hula Hoop Trainerin und Personal Coach"
+              alternativeSub="Mehr als nur Deine Trainerin"
               text="Willkommen in meiner Welt, ich bin Saskia - eine Powerfrau, die für Fitness und Natur brennt! Als
               Personal Coach, Prä- und Postnatale Fitnesstrainerin, Fitnesstrainerin für Hula Hoop,
               Beckenbodenexpertin und Ernährungsberaterin lebe ich meine Leidenschaft jeden Tag aufs Neue

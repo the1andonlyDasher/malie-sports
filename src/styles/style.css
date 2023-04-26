@@ -554,7 +554,7 @@ h4,
 h5,
 p,
 .sub {
-  text-align: left;
+  text-align: justify;
   margin: 0.25rem auto;
   width: 100%;
 }
@@ -568,7 +568,7 @@ p,
   .sub {
     margin: var(--space-s) auto var(--space-s) 0;
     width: 100%;
-    text-align: left;
+    text-align: justify;
   }
 }
 
@@ -2699,10 +2699,6 @@ ul.transition li {
   #about .photo {
     width: 350px;
   }
-}
-
-#about .lr__wrapper {
-  margin: var(--space-l) 0;
 }
 
 .image__hero .photo_large {
